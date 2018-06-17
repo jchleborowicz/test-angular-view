@@ -7,12 +7,10 @@ import {Server} from './server.model';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  serverElements: Server[] = [
-    new Server(true, 'Test server', 'Just a test!'),
-    new Server(false, 'apollo 440', 'Something really else...')
-  ];
+
+  servers: Server[] = [];
 
   onServerCreated(server: Server) {
-    this.serverElements.push(server);
+    this.servers.push(server);
   }
 }

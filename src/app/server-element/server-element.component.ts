@@ -9,7 +9,7 @@ import {Server} from '../server.model';
 export class ServerElementComponent implements OnInit {
 
   @Input()
-  element: Server;
+  server: Server;
 
   constructor() {
   }
