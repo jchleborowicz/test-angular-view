@@ -11,4 +11,8 @@ export class AppComponent {
     new Server(true, 'Test server', 'Just a test!'),
     new Server(false, 'apollo 440', 'Something really else...')
   ];
+
+  onServerCreated(server: Server) {
+    this.serverElements.push(server);
+  }
 }
