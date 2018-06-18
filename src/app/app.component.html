@@ -1,6 +1,7 @@
 <div class="container">
   <app-cockpit (serverCreated)="onServerCreated($event)"
                (blueprintCreated)="onBlueprintCreated($event)"
+               (reset)="onReset()"
   ></app-cockpit>
   <hr>
   <div class="row">
