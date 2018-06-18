@@ -10,7 +10,11 @@ export class AppComponent {
 
   servers: Server[] = [];
 
-  onServerCreated(server: Server) {
-    this.servers.push(server);
+  onServerCreated(server: { name: string; content: string }) {
+    this.servers.push(new Server(true, server.name, server.content));
+  }
+
+  onBlueprintCreated(blueprint: { name: string; content: string }) {
+    this.servers.push(new Server(false, blueprint.name, blueprint.content));
   }
 }
