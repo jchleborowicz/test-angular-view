@@ -8,7 +8,10 @@ import {Server} from './server.model';
 })
 export class AppComponent {
 
-  servers: Server[] = [];
+  servers: Server[] = [
+    new Server(true, 'apollo', 'cosmic!'),
+    new Server(false, 'mars', 'aggressive!!!')
+  ];
 
   onServerCreated(server: { name: string; content: string }) {
     this.servers.push(new Server(true, server.name, server.content));
