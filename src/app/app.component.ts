@@ -9,8 +9,7 @@ import {Server} from './server.model';
 export class AppComponent {
 
   servers: Server[] = [
-    new Server(true, 'apollo', 'cosmic!'),
-    new Server(false, 'mars', 'aggressive!!!')
+    new Server(true, 'apollo', 'cosmic!')
   ];
 
   onServerCreated(server: { name: string; content: string }) {
