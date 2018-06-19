@@ -3,10 +3,7 @@
   <div class="panel-heading">{{ server.name }}</div>
   <div class="panel-body">
     <p>
-      <strong *ngIf="server.isServer; else blueprint" style="color: red">{{ server.content }}</strong>
-      <ng-template #blueprint>
-        <em>{{ server.content }}</em>
-      </ng-template>
+      <ng-content></ng-content>
     </p>
   </div>
 </div>

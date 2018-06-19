@@ -7,6 +7,10 @@
   <div class="row">
     <div class="col-xs-12">
       <app-server-element *ngFor="let server of servers" [server]="server">
+        <strong *ngIf="server.isServer; else blueprint" style="color: red">{{ server.content }}</strong>
+        <ng-template #blueprint>
+          <em>{{ server.content }}</em>
+        </ng-template>
       </app-server-element>
     </div>
   </div>
