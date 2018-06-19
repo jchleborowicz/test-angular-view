@@ -24,4 +24,8 @@ export class AppComponent {
   onReset() {
     this.servers = [];
   }
+
+  onChangeFirst() {
+    this.servers[0].name = 'Changed';
+  }
 }

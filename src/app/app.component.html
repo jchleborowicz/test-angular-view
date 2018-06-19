@@ -6,7 +6,11 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let server of servers" [server]="server">
+      <button class="btn btn-warning" (click)="onChangeFirst()">Change first element</button>
+      <app-server-element *ngFor="let server of servers"
+                          [server]="server"
+                          [name]="server.name"
+      >
         <strong *ngIf="server.isServer; else blueprint" style="color: red">{{ server.content }}</strong>
         <ng-template #blueprint>
           <em>{{ server.content }}</em>

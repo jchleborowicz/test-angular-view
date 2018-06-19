@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, DoCheck, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 import {Server} from '../server.model';
 
 @Component({
@@ -6,15 +6,26 @@ import {Server} from '../server.model';
   templateUrl: './server-element.component.html',
   styleUrls: ['./server-element.component.css']
 })
-export class ServerElementComponent implements OnInit {
+export class ServerElementComponent implements OnInit, OnChanges, DoCheck {
 
-  @Input()
-  server: Server;
+  @Input() server: Server;
+  @Input() name: string;
 
   constructor() {
+    console.log('constructor called!');
   }
 
-  ngOnInit() {
+  ngOnInit(): void {
+    console.log('ngOnInit called!');
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log('ngOnChanges called!');
+    console.log(changes);
+  }
+
+  ngDoCheck(): void {
+    console.log('ngDoCheck called!');
   }
 
 }
