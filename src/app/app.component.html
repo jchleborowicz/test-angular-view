@@ -11,10 +11,12 @@
                           [server]="server"
                           [name]="server.name"
       >
+        <p #contentParagraph>
         <strong *ngIf="server.isServer; else blueprint" style="color: red">{{ server.content }}</strong>
         <ng-template #blueprint>
           <em>{{ server.content }}</em>
         </ng-template>
+        </p>
       </app-server-element>
     </div>
   </div>
